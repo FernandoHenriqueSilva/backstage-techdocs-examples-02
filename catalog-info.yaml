@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: meu-servico-docs
+  description: Documentação técnica do Meu Serviço
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-entity: component:default/meu-servico-docs
+spec:
+  type: documentation
+  lifecycle: production
+  owner: team-platform
+  system: docs-system

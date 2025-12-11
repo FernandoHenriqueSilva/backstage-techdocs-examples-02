@@ -1,0 +1,56 @@
+site_name: 'Meu Serviço - Documentação'
+site_description: 'Documentação técnica completa do Meu Serviço'
+
+nav:
+  - Início: index.md
+  - Visão Geral: overview.md
+  - Primeiros Passos: getting-started.md
+  - Arquitetura:
+    - Visão do Sistema: architecture/system-architecture.md
+    - Componentes: architecture/components.md
+  - API:
+    - API REST: api/rest-api.md
+    - Endpoints: api/endpoints.md
+  - Guias:
+    - Deploy: guides/deployment.md
+    - Troubleshooting: guides/troubleshooting.md
+  - Recursos:
+    - Glossário: resources/glossary.md
+    - Referências: resources/references.md
+
+plugins:
+  - techdocs-core
+  - mkdocs-monorepo-plugin
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
+  - codehilite
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Modo Claro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Modo Escuro
